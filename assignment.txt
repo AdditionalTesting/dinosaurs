@@ -1,0 +1,15 @@
+1. SELECT COUNT(*) FROM dinos;
+
+2. SELECT name FROM dinos WHERE period='Jurassic';
+
+3. SELECT COUNT(*) FROM dinos WHERE period='Cretaceous';
+
+4. SELECT (*) FROM dinos WHERE period='Cretaceous' OR period='Jurassic' ORDER BY name;
+
+5. SELECT name FROM dinos WHERE diet='Herbivorous' AND t_order='Saurischia';
+
+6. UPDATE dinos SET name='Shortie' WHERE length=(SELECT MIN(length) FROM dinos);
+
+7. SELECT name FROM dinos ORDER BY name LIMIT 1;
+
+8. UPDATE dinos SET name='The Famous Five' WHERE id=(SELECT id FROM dinos ORDER BY length ASC LIMIT 5);
